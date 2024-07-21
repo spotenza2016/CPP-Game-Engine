@@ -84,6 +84,7 @@ QuadTree::collisionCheck(const sf::Rect<float> &movement, QuadTree::DIRECTION di
     else if (movement.intersects(root->region)) {
         return collisionHelper(root, movement, direction, object).second;
     }
+    return nullptr;
 }
 
 QuadTree::QuadTree(const sf::Rect<float> &rect) {
